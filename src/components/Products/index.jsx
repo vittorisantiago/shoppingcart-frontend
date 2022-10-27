@@ -21,7 +21,7 @@ const Products = () => {
               </p>
             </div>
             {!product.inCart ? (
-              <button onClick={() => addItemToCart(product)}>
+              <button className={styles.agrandar} onClick={() => addItemToCart(product)}>
                 Add to Cart
               </button>
             ) : (
