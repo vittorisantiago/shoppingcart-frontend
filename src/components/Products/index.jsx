@@ -16,6 +16,9 @@ const Products = () => {
               <p>
                 {product.name} - ${product.price}
               </p>
+              <p className={styles.provider}>
+                Provider: {product.provider}
+              </p>
             </div>
             {!product.inCart ? (
               <button onClick={() => addItemToCart(product)}>

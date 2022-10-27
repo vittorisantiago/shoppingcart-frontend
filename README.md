@@ -1,6 +1,20 @@
-# Carrito de compras usando React Context y Sass muy FACIL!
-Video en youtube: https://www.youtube.com/watch?v=ywvsztMU_oM&ab_channel=Mauro
+<h1 align=center> Shopping Cart FrontEnd 🛒 </h1>
 
-![image](https://user-images.githubusercontent.com/81174890/154757409-06fe6a41-c264-4ff7-a23e-f88bcb86354f.png)
-![image](https://user-images.githubusercontent.com/81174890/154757437-dc2f3870-ab4a-4a9f-ba5e-043fcf4d1241.png)
-![image](https://user-images.githubusercontent.com/81174890/154757473-aec0bf06-05d9-45fa-87c8-68d3f56f6f64.png)
+### ⚡ Appendix
+
+Proyecto universitario para hacer un Shopping Cart del lado del frontend con React y Sass y luego conectarlo al backend. 🚀
+
+### 🛠 Skills
+<div> 
+<a href="https://nodejs.org/es/" target="_blank" rel="noreferrer"> <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/nodejs_plain_logo_icon_146409.png" alt="nodejs" width="40px" height="40px" HSPACE="5"/> </a>
+<a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/git_plain_logo_icon_146507.png" alt="git" width="40px" height="40px" HSPACE="5"/> </a> 
+<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/typescript_original_logo_icon_146317.png" alt="typescript" width="40px" height="40px" HSPACE="5"/> </a> 
+<a href="http://expressjs.com/es/" target="_blank" rel="noreferrer"> <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png" alt="expressjs" width="40px" height="40px" HSPACE="5"/> </a> 
+<a href="https://www.postman.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/postman_macos_bigsur_icon_189815.png" alt="postman" width="40px" height="40px"/> </a> 
+</div>
+
+### 👨🏽‍💻 Author
+- [@spoilyzer](https://www.github.com/spoilyzer) - Santiago Vittori
+
+### 🙋🏽‍♂️ About Me
+Estudiante de la carrera Ingeniería en Sistemas - UAI 🎓<br>

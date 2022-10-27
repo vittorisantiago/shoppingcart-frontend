@@ -25,6 +25,12 @@
       font-weight: bolder;
     }
 
+    .provider {
+      font-family: Roboto;
+      text-align: center;
+      font-weight: lighter;
+    }
+
     button {
       border: none;
       border-radius: 3px;
@@ -33,7 +39,7 @@
     }
 
     button:hover {
-      background-color: #cecece;
+      background-color: cornflowerblue;
     }
   }
 }
