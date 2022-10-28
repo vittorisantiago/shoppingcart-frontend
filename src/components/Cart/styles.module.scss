@@ -8,7 +8,7 @@
   .buttonCartContainer {
     position: absolute;
     margin-top: 10px;
-    margin-right: 20px;
+    margin-right: 30px;
     cursor: pointer;
     z-index: 2;
 
@@ -80,14 +80,9 @@
 }
 
 ::-webkit-scrollbar {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 ::-webkit-scrollbar:vertical {
   width: 3px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #797979;
-  border-radius: 20px;
 }
