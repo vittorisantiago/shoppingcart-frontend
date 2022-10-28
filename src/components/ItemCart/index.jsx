@@ -3,10 +3,10 @@ import CartContext from "../../context/CartContext";
 import styles from "./styles.module.scss";
 
 export const ItemCart = ({ item }) => {
-  /* Traemos del context las funciones para agregar y sacar productos del carrito */
+  // Traemos del context las funciones para agregar y sacar productos del carrito
   const { editItemToCart } = useContext(CartContext);
 
-  /* Desestructuramos el item para sacar solo la id */
+  // Desestructuramos el item para sacar solo el id
   const { amount } = item;
 
   return (
@@ -14,7 +14,7 @@ export const ItemCart = ({ item }) => {
       <img src={item.img} alt={item.name} />
       <div className={styles.dataContainer}>
         <div className={styles.left}>
-          <p>{item.name}</p>
+          <p>{item.name} - {item.provider}</p>
           <div className={styles.buttons}>
             <button className={styles.add} onClick={() => editItemToCart(item._id, "add", amount)}>
               +

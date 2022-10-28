@@ -28,9 +28,9 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   const addItemToCart = async (product) => {
-    const { name, img, price } = product;
+    const { name, img, price, provider } = product;
 
-    await axios.post("http://localhost:4000/products-cart", { name, img, price });
+    await axios.post("http://localhost:4000/products-cart", { name, img, price, provider });
 
     getProducts();
     getProductsCart();
