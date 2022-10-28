@@ -41,7 +41,13 @@ export const CartProvider = ({ children }) => {
       await axios
         .delete(`http://localhost:4000/products-cart/${id}`)
         .then(({ data }) => console.log(data));
-    } else {
+    } else if (query === "del" && amount > 1) {
+      await axios
+        .put(`http://localhost:4000/products-cart/${id}?query=${query}`, {
+          amount,
+        })
+        .then(({ data }) => console.log(data));
+    } else if (query === "add") {
       await axios
         .put(`http://localhost:4000/products-cart/${id}?query=${query}`, {
           amount,
