@@ -1,5 +1,8 @@
-import { createContext, useEffect, useState } from "react";
-import axios from "axios";
+import { createContext, useEffect, useState } from "react"; 
+/* createContext crea un objeto Context, cuando React renderiza un componente. useEffect, nos permite 
+definir efectos y useState nos permite añadir el estado de React a un componente de función. */
+
+import axios from "axios"; // Cliente HTTP basado en promesas para node.js y el navegador. Duevuelve datos en JSON
 
 // Creamos el context, se le puede pasar un valor inicial
 const CartContext = createContext();

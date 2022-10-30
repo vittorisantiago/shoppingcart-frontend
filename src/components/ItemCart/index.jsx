@@ -6,7 +6,7 @@ export const ItemCart = ({ item }) => {
   // Traemos del context las funciones para agregar y sacar productos del carrito
   const { editItemToCart } = useContext(CartContext);
 
-  // Desestructuramos el item para sacar solo el id
+  // Desestructuramos el item
   const { amount } = item;
 
   return (

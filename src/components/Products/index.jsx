@@ -3,7 +3,7 @@ import CartContext from "../../context/CartContext";
 import styles from "./styles.module.scss";
 
 const Products = () => {
-  /* Traemos del context la funcion para agregar un producto */
+  // Traemos del context la funcion para agregar un producto
   const { addItemToCart, products } = useContext(CartContext);
 
   return (
