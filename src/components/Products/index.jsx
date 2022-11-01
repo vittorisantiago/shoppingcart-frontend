@@ -25,7 +25,7 @@ const Products = () => {
                 Add to Cart
               </button>
             ) : (
-              <button>Already in cart</button>
+              <p className={styles.agregado}>Already in cart</p>
             )}
           </div>
         ))}

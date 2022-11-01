@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react"; 
+import { createContext, useEffect, useState } from "react";
 /* createContext crea un objeto Context, cuando React renderiza un componente. useEffect, nos permite 
 definir efectos y useState nos permite añadir el estado de React a un componente de función. */
 
@@ -31,15 +31,15 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   const addItemToCart = async (product) => {
-    const { name, img, price, provider } = product;
+    const { name, img, price, provider, stock } = product;
 
-    await axios.post("http://localhost:4000/products-cart", { name, img, price, provider });
+    await axios.post("http://localhost:4000/products-cart", { name, img, price, provider, stock });
 
     getProducts();
     getProductsCart();
   };
 
-  const editItemToCart = async (id, query, amount) => {
+  const editItemToCart = async (id, query, amount, stock) => {
     if (query === "del" && amount === 1) {
       await axios
         .delete(`http://localhost:4000/products-cart/${id}`)
@@ -48,12 +48,14 @@ export const CartProvider = ({ children }) => {
       await axios
         .put(`http://localhost:4000/products-cart/${id}?query=${query}`, {
           amount,
+          stock,
         })
         .then(({ data }) => console.log(data));
-    } else if (query === "add") {
+    } else if (query === "add" && stock > 0) {
       await axios
         .put(`http://localhost:4000/products-cart/${id}?query=${query}`, {
           amount,
+          stock,
         })
         .then(({ data }) => console.log(data));
     }
@@ -62,9 +64,18 @@ export const CartProvider = ({ children }) => {
     getProductsCart();
   };
 
+  const trashItemToCart = async (id) => {
+    await axios
+    .delete(`http://localhost:4000/products-cart/${id}`)
+    .then(({ data }) => console.log(data));
+
+    getProducts();
+    getProductsCart();
+  };
+
   return (
     // Envolvemos el children con el provider y le pasamos un objeto con las propiedades que necesitamos por value
-    <CartContext.Provider value={{ cartItems, products, addItemToCart, editItemToCart }}>
+    <CartContext.Provider value={{ cartItems, products, addItemToCart, editItemToCart, trashItemToCart }}>
       {children}
     </CartContext.Provider>
   );

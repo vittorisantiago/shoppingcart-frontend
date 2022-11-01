@@ -4,10 +4,10 @@ import styles from "./styles.module.scss";
 
 export const ItemCart = ({ item }) => {
   // Traemos del context las funciones para agregar y sacar productos del carrito
-  const { editItemToCart } = useContext(CartContext);
+  const { editItemToCart, trashItemToCart } = useContext(CartContext);
 
   // Desestructuramos el item
-  const { amount } = item;
+  const { amount, stock} = item;
 
   return (
     <div className={styles.cartItem}>
@@ -16,16 +16,20 @@ export const ItemCart = ({ item }) => {
         <div className={styles.left}>
           <p>{item.name} - {item.provider}</p>
           <div className={styles.buttons}>
-            <button className={styles.add} onClick={() => editItemToCart(item._id, "add", amount)}>
+            <button className={styles.add} onClick={() => editItemToCart(item._id, "add", amount, stock)}>
               +
             </button>
-            <button className={styles.quit} onClick={() => editItemToCart(item._id, "del", amount)}>
+            <button className={styles.quit} onClick={() => editItemToCart(item._id, "del", amount, stock)}>
               -
+            </button>
+            <button className={styles.trash} onClick={() => trashItemToCart(item._id)}>
+              🗑️
             </button>
           </div>
         </div>
         <div className={styles.right}>
           <div>{item.amount}</div>
+          <p className={styles.stock}>Stock: {item.stock} </p>
           <p>Total: ${item.amount * item.price}</p>
         </div>
       </div>
